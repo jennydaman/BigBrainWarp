@@ -1,8 +1,10 @@
 #!/bin/bash
 
-# set up variables - change for your environment
-export bbwDir=/data_/mica1/03_projects/casey/BigBrainWarp/  # change to your path to the github repo
-export mnc2Path=/data_/mica1/01_programs/minc2/ # path to your path to minc2 installation
+HERE="${0%/*}"
+
+# set up variables
+export bbwDir="$(realpath "$HERE/..")"
+export mnc2Path="$MNIBASEPATH/bin"
 
 # set template
 export icbmTemplate=$bbwDir/spaces/tpl-icbm/tpl-icbm_desc-t1_tal_nlin_sym_09c_mask.mnc
